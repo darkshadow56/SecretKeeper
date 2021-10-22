@@ -1,0 +1,16 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2.1rem;
+  color: rgb(86, 87, 88);
+  text-transform: capitalize;
+}
