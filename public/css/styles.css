@@ -2,15 +2,137 @@
 body {
   background-color: #E8ECEF;
 }
+.home-body{
+  min-height: 60vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.secretsBody{
+  min-height: 80vh;
+}
+.homeButtons{
+  padding: .1rem;
+}
+.registerButton{
+  font-weight: normal;
+  color: white;
+padding: .9rem;
+margin-right: .5rem;
+background-color: rgb(204, 83, 113);
+border: none;
+outline: none;
+}
+
+.loginButton{
+  font-weight: normal;
+  color: white;
+padding: .9rem;
+margin-left: .5rem;
+background-color: rgb(204, 83, 113);
+border: none;
+outline: none;
+width: 6.2rem;
+}
+.registerPageButton{
+  background-color: rgb(204, 83, 113);
+  border: none;
+  outline: none;
+  padding: .8rem;
+
+}
+.loginPageButton{
+  background-color: rgb(204, 83, 113);
+  border: none;
+  outline: none;
+  padding: .8rem;
+}
+.submitSecretButton{
+  background-color: rgb(204, 83, 113);
+  border: none;
+  outline: none;
+  padding: .8rem;
+  margin-left: .5rem;
+}
+.submitPageButton{
+  background-color: rgb(204, 83, 113);
+  border: none;
+  outline: none;
+  padding: .8rem;
+  margin-left: .5rem;
+  width: 6.4rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.logoutButton{
+  background-color: rgb(204, 83, 113);
+  border: none;
+  outline: none;
+  padding: .8rem;
+  margin-right: .5rem;
+  color: white;
+  width: 9.8rem;
+}
 
 .centered {
-    padding-top: 200px;
+    padding-top: 100px;
     text-align: center;
 }
 
 .secret-text {
   text-align: center;
-  font-size: 2.1rem;
-  color: rgb(86, 87, 88);
+  font-size: 1.8rem;
+  padding: .3rem;
+  color: rgb(253, 247, 247);
+  width: 50%;
+  margin: auto;
+  margin-top: .4rem;
+  margin-bottom: .4rem;
+  background-color: rgb(63, 63, 63);
   text-transform: capitalize;
 }
+.brandLogo{
+  width: 7rem;
+}
+.secretsLogo{
+  width: 3rem;
+}
+.brandName{
+  font-size: 3.5rem;
+}
+.brandSlogan{
+font-size: 1.5rem;
+}
+.breakingLine{
+  width: 100%;
+  margin-bottom: 1.2rem;
+  height: .3vh;
+  background-image: linear-gradient(to right, rgb(124, 103, 103),rgb(138, 128, 109), rgb(136, 122, 92));
+}
+.invisibleText{
+  display: none;
+}
+.googleButton{
+padding: .1rem;
+}
+.facebookButton{
+padding: .1rem;
+}
+.headers{
+  color: tomato;
+  padding: .4rem;
+}
+.labels{
+  font-weight: 600;
+}
+.secretInput{
+  border: black 1.5px solid;
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 7.5vh;
+}
+.secretInput::placeholder{
+  font-weight: 500;
+}
+

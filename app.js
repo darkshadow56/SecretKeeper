@@ -18,7 +18,7 @@ const findOrCreate = require('mongoose-findorcreate');
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname +'/public'));
-mongoose.connect("mongodb://localhost:27017/userDB", () => {
+mongoose.connect(process.env.DB_CONNECTION, () => {
   console.log("Database connected!");
 });
 app.use(
