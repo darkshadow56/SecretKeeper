@@ -110,7 +110,7 @@ app.get( '/auth/google/secrets',
 
 /////////////ROUTE TO CALL FACEBOOK AUTH/////////////////
 app.get('/auth/facebook',
-  passport.authenticate('facebook', {scope: 'read_stream'}));
+  passport.authenticate('facebook'));
 
 
 ////////////RESPONSE ROUTE FROM FACEBOOK//////////////
