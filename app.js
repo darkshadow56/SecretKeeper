@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
@@ -11,6 +11,7 @@ const {} = require("dotenv").config();
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const findOrCreate = require('mongoose-find-or-create');
+
 
 //////DECLARATIONS/////
 
@@ -64,7 +65,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/secrets",
+      callbackURL: "https://secrets-keeeper.herokuapp.com/auth/google/secrets",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     (request, accessToken, refreshToken, profile, done) => {
@@ -80,7 +81,7 @@ passport.use(
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/secrets"
+    callbackURL: "https://secrets-keeeper.herokuapp.com/auth/facebook/secrets"
   },
   (accessToken, refreshToken, profile, cb)=> {
     User.findOrCreate({ facebookId: profile.id }, (err, user)=> {
